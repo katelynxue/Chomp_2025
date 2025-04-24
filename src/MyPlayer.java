@@ -12,11 +12,13 @@ public class MyPlayer {
          * Add your code here.
          */
 
-        for(int x=0; x<10; x++){
-            for(int y=0; y<x; y++){
+        // print ALL baords (possible and not possible) starting with 1 0 0
+        // and them from there try to narrow it down to just possible boards
 
+        for(int x=1; x<4; x++){
+            for(int i=0; i<4;i++){
+                System.out.println(x+" " + i);
             }
-
         }
     }
 
