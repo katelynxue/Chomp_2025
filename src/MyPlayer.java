@@ -17,7 +17,15 @@ public class MyPlayer {
 
         for(int x=1; x<4; x++){
             for(int i=0; i<4;i++){
-                System.out.println(x+" " + i);
+                for(int y=0; y<4; y++){
+                    if(x<i || x<y || i<y){
+
+                    }
+                    else{
+                        System.out.println(x+" " + i+" "+y);
+
+                    }
+                }
             }
         }
     }
