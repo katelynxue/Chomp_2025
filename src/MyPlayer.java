@@ -16,18 +16,36 @@ public class MyPlayer {
         // and them from there try to narrow it down to just possible boards
 
         for(int x=1; x<4; x++){
-            for(int i=0; i<4;i++){
-                for(int y=0; y<4; y++){
-                    if(x<i || x<y || i<y){
+            for(int y=0; y<4;y++){
+                for(int z=0; z<4; z++){
+                    if(x<y || x<z || y<z){
 
                     }
                     else{
-                        System.out.println(x+" " + i+" "+y);
+                        System.out.println("regular boards " +x+" " + y+" "+z);
+                        oneMoveAway(x, y, z);
 
                     }
                 }
             }
         }
+    }
+
+    public void oneMoveAway(int x, int y, int z){
+        // for each ijk board, print all boards that result
+        // after a single move
+        for(int i=z-1; i>=0; i--){
+            System.out.println(x+" "+y+" "+i);
+        }
+        for(int i=y-1; i>=0; i--){
+            System.out.println(x+" "+i+" "+i);
+            if(i>=z){
+                System.out.println(i+" "+ x+" "+z);
+            } else{
+                System.out.println(i+" "+x+" "+x);
+            }
+        }
+
     }
 
     public Point move(Chip[][] pBoard) {
