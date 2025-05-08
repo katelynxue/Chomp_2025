@@ -45,7 +45,14 @@ public class MyPlayer {
                 System.out.println(i+" "+x+" "+x);
             }
         }
-
+        for(int i=x-1; i>=0; i--){
+            System.out.println(i+""+i+""+i);
+            if(i>=y){
+                System.out.println(i+""+y+""+z);
+            } else{
+                System.out.println(i+""+y+""+z);
+            }
+        }
     }
 
     public Point move(Chip[][] pBoard) {
